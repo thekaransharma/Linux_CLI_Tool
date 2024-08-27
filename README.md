@@ -22,3 +22,7 @@
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/thekaransharma/Linux_CLI_Tool.git
+
+1. **Navigate to the Project Directory**:
+   ```bash
+   cd Linux_CLI_Tool
