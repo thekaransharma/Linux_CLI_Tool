@@ -21,4 +21,4 @@
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/sysopctl.git
+   git clone https://github.com/thekaransharma/Linux_CLI_Tool.git
