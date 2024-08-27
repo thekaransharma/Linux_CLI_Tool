@@ -1,0 +1,103 @@
+#!/bin/bash
+
+VERSION="v0.1.0"
+
+# diaplaying help
+function display_help() {
+    echo "Usage: sysopctl [option] [arguments]"
+    echo ""
+    echo "Options:"
+    echo "  --help         Display this help message"
+    echo "  --version      Display version information"
+    echo "  service list   List all running services"
+    echo "  service start  Start a service"
+    echo "  service stop   Stop a service"
+    echo "  system load    Display system load"
+    echo "  disk usage     Display disk usage"
+    echo "  process monitor Monitor system processes"
+    echo "  logs analyze   Analyze system logs"
+    echo "  backup <path>  Backup system files"
+}
+
+# Function to display version
+function display_version() {
+    echo "sysopctl version $VERSION"
+}
+
+# Check command line arguments
+case "$1" in
+    --help)
+        display_help
+        ;;
+    --version)
+        display_version
+        ;;
+    service)
+        case "$2" in
+            list)
+                systemctl list-units --type=service
+                ;;
+            start)
+                systemctl start "$3"
+                ;;
+            stop)
+                systemctl stop "$3"
+                ;;
+            *)
+                echo "Invalid service command."
+                ;;
+        esac
+        ;;
+    system)
+        case "$2" in
+            load)
+                uptime
+                ;;
+            *)
+                echo "Invalid system command."
+                ;;
+        esac
+        ;;
+    disk)
+        case "$2" in
+            usage)
+                df -h
+                ;;
+            *)
+                echo "Invalid disk command."
+                ;;
+        esac
+        ;;
+    process)
+        case "$2" in
+            monitor)
+                top
+                ;;
+            *)
+                echo "Invalid process command."
+                ;;
+        esac
+        ;;
+    logs)
+        case "$2" in
+            analyze)
+                journalctl -p crit -n 10
+                ;;
+            *)
+                echo "Invalid logs command."
+                ;;
+        esac
+        ;;
+    backup)
+        if [ -z "$2" ]; then
+            echo "Please specify a path to backup."
+        else
+            rsync -avh "$2" /backup/
+            echo "Backup complete."
+        fi
+        ;;
+    *)
+        echo "Invalid command."
+        display_help
+        ;;
+esac

@@ -1,0 +1,64 @@
+.TH SYSOPCTL 1 "August 2024" "v0.1.0" "sysopctl manual"
+
+.SH NAME
+sysopctl \- A custom command for managing system resources and tasks.
+
+.SH SYNOPSIS
+.B sysopctl
+[\fIOPTION\fR] [\fICOMMAND\fR] [\fIARGUMENTS\fR]
+
+.SH DESCRIPTION
+The \fBsysopctl\fR command is used to manage various system resources, services, and tasks.
+It provides a set of subcommands for viewing system information, managing services, and more.
+
+.SH OPTIONS
+.TP
+\fB--help\fR
+Displays help information about the \fBsysopctl\fR command.
+.TP
+\fB--version\fR
+Shows the version of the \fBsysopctl\fR command.
+
+.SH COMMANDS
+.TP
+\fBservice list\fR
+Lists all currently running services.
+.TP
+\fBservice start <service-name>\fR
+Starts the specified service.
+.TP
+\fBservice stop <service-name>\fR
+Stops the specified service.
+.TP
+\fBsystem load\fR
+Displays the current system load averages.
+.TP
+\fBdisk usage\fR
+Shows disk usage statistics by partition.
+.TP
+\fBprocess monitor\fR
+Monitors system processes in real-time.
+.TP
+\fBlogs analyze\fR
+Analyzes recent critical system logs.
+.TP
+\fBbackup <path>\fR
+Backs up system files to the specified path.
+
+.SH EXAMPLES
+.TP
+List all running services:
+\fBsysopctl service list\fR
+.TP
+Start a service named \fIapache2\fR:
+\fBsysopctl service start apache2\fR
+.TP
+Display the current system load:
+\fBsysopctl system load\fR
+
+.SH AUTHOR
+Written by Mohd Tarique.
+
+.SH SEE ALSO
+\fBsystemctl\fR(1), \fBuptime\fR(1), \fBdf\fR(1), \fBtop\fR(1), \fBrsync\fR(1).
+
