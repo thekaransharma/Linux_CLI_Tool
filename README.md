@@ -40,3 +40,26 @@
    ```bash
    sudo cp sysopctl.1 /usr/share/man/man1/ 
 
+
+## Usage
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/thekaransharma/Linux_CLI_Tool.git
+
+1. **Navigate to the Project Directory**:
+   ```bash
+   cd Linux_CLI_Tool
+
+1. **Make the Script Executabl**:
+   ```bash
+   chmod +x sysopctl
+
+1. **Move the Script to a Directory in Your PATH**:
+   ```bash
+   sudo cp sysopctl /usr/local/bin/
+
+
+1. **Copy the Man Page to the Appropriate Directory**:
+   ```bash
+   sudo cp sysopctl.1 /usr/share/man/man1/ 
