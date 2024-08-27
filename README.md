@@ -26,3 +26,11 @@
 1. **Navigate to the Project Directory**:
    ```bash
    cd Linux_CLI_Tool
+
+1. **Navigate to the Project Directory**:
+   ```bash
+   cd Linux_CLI_Tool
+
+1. **Navigate to the Project Directory**:
+   ```bash
+   cd Linux_CLI_Tool
