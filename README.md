@@ -43,23 +43,43 @@
 
 ## Usage
 
-1. **Clone the Repository**:
+1. **View the Man page**:
    ```bash
-   git clone https://github.com/thekaransharma/Linux_CLI_Tool.git
+   man sysopctl
 
-1. **Navigate to the Project Directory**:
+1. **To see the available commands and options, run:**:
    ```bash
-   cd Linux_CLI_Tool
+   sysopctl --help
 
-1. **Make the Script Executabl**:
+1. **List Running Services**:
    ```bash
-   chmod +x sysopctl
+   sysopctl service list
 
-1. **Move the Script to a Directory in Your PATH**:
+1. **Start a Service:**:
    ```bash
-   sudo cp sysopctl /usr/local/bin/
-
-
-1. **Copy the Man Page to the Appropriate Directory**:
+   sysopctl service start <service-name>
+   
+1. **Stop a Service:**:
    ```bash
-   sudo cp sysopctl.1 /usr/share/man/man1/ 
+   sysopctl service stop <service-name>
+
+1. **View System Load:**:
+   ```bash
+   sysopctl system load
+
+1. **Check Disk Usage::**:
+   ```bash
+   sysopctl disk usage
+
+1. **Monitor Processes:**:
+   ```bash
+   sysopctl process monitor
+
+1. **Analyze System Logs:**:
+   ```bash
+   sysopctl logs analyze
+
+
+1. **Backup Files:**:
+   ```bash
+   sysopctl backup <path>
