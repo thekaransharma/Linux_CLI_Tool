@@ -27,10 +27,11 @@
    ```bash
    cd Linux_CLI_Tool
 
-1. **Navigate to the Project Directory**:
+1. **Make the Script Executabl**:
    ```bash
-   cd Linux_CLI_Tool
+   chmod +x sysopctl
 
-1. **Navigate to the Project Directory**:
+1. **Move the Script to a Directory in Your PATH**:
    ```bash
-   cd Linux_CLI_Tool
+   sudo cp sysopctl /usr/local/bin/
+
