@@ -35,3 +35,13 @@
    ```bash
    sudo cp sysopctl /usr/local/bin/
 
+
+1. **Copy the Man Page to the Appropriate Directory**:
+   ```bash
+   sudo cp sysopctl.1 /usr/share/man/man1/
+
+
+
+
+   
+
